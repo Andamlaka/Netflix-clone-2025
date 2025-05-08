@@ -1,0 +1,49 @@
+/* header.css */
+
+.header_outer_container {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  z-index: 100;
+  transition: background-color 0.4s ease;
+  background-color: transparent; /* Transparent at first */
+}
+
+.header_outer_container.scrolled {
+  background-color: #141414; /* Becomes dark after scroll */
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li {
+  margin-right: 20px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-list li:hover {
+  color: #b3b3b3;
+}
+
+.nav-list img {
+  height: 32px;
+  object-fit: contain;
+  background: none;
+}
