@@ -1,0 +1,110 @@
+.footer {
+  background-color: #141414;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 13px;
+  margin-top: 50px;
+}
+
+.footer > div {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Social Icons */
+.social-icons-list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 2px;
+
+}
+
+.social-icons-list li svg {
+  color: #999;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.social-icons-list li svg:hover {
+  color: white;
+}
+
+/* Footer Links */
+.footer-links-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  min-width: 180px;
+}
+
+.footer-column li {
+  margin-bottom: 12px;
+}
+
+.footer-column a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: white;
+}
+
+/* Service Code Button */
+.service-code {
+  background: transparent;
+  color: #999;
+  border: 1px solid #999;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-code:hover {
+  color: white;
+  border-color: white;
+}
+
+/* Bottom Text */
+.footer-bottom-text {
+  text-align: left;
+  color: #666;
+  margin-top: 30px;
+  font-size: 12px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-links-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-column {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .social-icons-list {
+    justify-content: center;
+  }
+
+  .footer-bottom-text {
+    text-align: center;
+  }
+}

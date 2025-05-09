@@ -12,20 +12,25 @@
   z-index: 100;
   transition: background-color 0.4s ease;
   background-color: transparent; /* Transparent at first */
+  background-color: #141414;
 }
 
 .header_outer_container.scrolled {
-  background-color: #141414; /* Becomes dark after scroll */
+  background-color: #141414; /* B ecomes dark after scroll */
 }
 
 .header-left, .header-right {
   display: flex;
   align-items: center;
+}.header-right .nav-list li:last-child {
+  margin-right: 80px; /* Adjust the margin to your liking */
 }
+
 
 .nav-list {
   display: flex;
   list-style: none;
+  align-items: center;
   padding: 0;
   margin: 0;
 }
@@ -33,7 +38,7 @@
 .nav-list li {
   margin-right: 20px;
   color: white;
-  font-size: 14px;
+  font-size: 17px;
   cursor: pointer;
   transition: color 0.3s ease;
 }
