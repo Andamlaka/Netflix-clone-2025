@@ -1,7 +1,7 @@
 .banner {
   margin-top: 0vh;
   height: 80vh;
-  margin-bottom: -80px;
+  margin-bottom:0px;
   color: white;
   object-fit: contain;
   position: relative;
