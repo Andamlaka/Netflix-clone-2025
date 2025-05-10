@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Andamlaka.github.io/netflix-clone-2025/static/css/main.359d27a4.css",
+    "main.js": "/Andamlaka.github.io/netflix-clone-2025/static/js/main.8b661e31.js",
+    "static/media/NetflixLogo.png": "/Andamlaka.github.io/netflix-clone-2025/static/media/NetflixLogo.829097521da0839a14d0.png",
+    "index.html": "/Andamlaka.github.io/netflix-clone-2025/index.html",
+    "main.359d27a4.css.map": "/Andamlaka.github.io/netflix-clone-2025/static/css/main.359d27a4.css.map",
+    "main.8b661e31.js.map": "/Andamlaka.github.io/netflix-clone-2025/static/js/main.8b661e31.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.359d27a4.css",
+    "static/js/main.8b661e31.js"
+  ]
+}
