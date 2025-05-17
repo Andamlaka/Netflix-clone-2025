@@ -6,14 +6,13 @@ async function addUser() {
     const user = await prisma.user.create({
       data: {
         name: "Test User",
-        email: "test@example.com"
-      },
+        email: "test@example.com",
+        password: "yourSecurePassword123"  // Provide an actual password string
+      }
     });
-    console.log("✅ User added:", user);
+    console.log("User added:", user);
   } catch (error) {
-    console.error("⚠️ Error adding user:", error);
-  } finally {
-    await prisma.$disconnect();
+    console.error("Error adding user:", error);
   }
 }
 
