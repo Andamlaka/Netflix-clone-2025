@@ -1,0 +1,169 @@
+/* Landing Page Styles */
+.landing-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Netflix Logo */
+.netflix-logo {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  width: 150px;
+  z-index: 10;
+}
+
+/* Sign-In Button */
+.signin-button {
+  position: absolute;
+  width: 100px;
+  top: 45px;
+  right: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #E50914;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.signin-button:hover {
+  background-color: #b20710;
+}
+
+/* Movie Collage Background */
+.multi-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  z-index: -1;
+  filter: blur(2px);
+}
+
+/* Individual Movie Layers */
+.background-layer {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Gradient Overlay for Better Readability */
+.landing-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  z-index: 2;
+}
+
+.body{
+  font-size: 22px;
+  font-weight: 600;
+  z-index: 3;
+  margin-top: 5vh;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index:3;
+}
+
+
+
+.signup-text {
+  font-size: 22px;
+  font-weight: 500;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Responsive Email Input & Button */
+.signup-input {
+  width: 300px;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.signup-button {
+  padding: 14px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #E50914;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+  background-color: #b20710;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .signup-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .signup-input {
+    width: 100%;
+  }
+
+  .signup-button {
+    width: 100%;
+  }
+
+  .landing-container h1 {
+    font-size: 32px;
+  }
+
+  .landing-container p {
+    font-size: 16px;
+  }
+
+  .background-layer {
+    width: 50%;
+    height: 33%;
+  }
+}
+.signup-input.error {
+  border: 2px solid red; /* Adds a red border */
+  background-color: #ffcccc; /* Light red background */
+}
+
+

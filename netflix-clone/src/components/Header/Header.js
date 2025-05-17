@@ -1,12 +1,22 @@
-import React from 'react'
-import './header.css'
-import NetflixLogo from '../../assets/images/NetflixLogo.png'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import './header.css';
+import NetflixLogo from '../../assets/images/NetflixLogo.png';
 import SearchIcon from '@mui/icons-material/Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
 const Header = () => {
+  const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    localStorage.removeItem('user');
+    navigate('/signin');
+  };
+
   return (
     <div className="header_outer_container">
       <div className="header-left">
@@ -22,17 +32,25 @@ const Header = () => {
         </ul>
       </div>
       <div className="header-right">
-
         <ul className="nav-list">
-          <li><SearchIcon/></li> 
-          <li><NotificationsNoneIcon/></li>
-          <li><AccountBoxIcon/></li>
-          <li><ArrowDropDownIcon/></li>
-         
+          <li><SearchIcon /></li>
+          <li><NotificationsNoneIcon /></li>
+          <li><AccountBoxIcon /></li>
+          <li
+            className="dropdown-container"
+            onClick={() => setShowDropdown(!showDropdown)}
+          >
+            <ArrowDropDownIcon />
+            {showDropdown && (
+              <div className="dropdown-menu">
+                <button onClick={handleLogout}>Logout</button>
+              </div>
+            )}
+          </li>
         </ul>
       </div>
     </div>
   );
-}
+};
 
-export default Header
+export default Header;
