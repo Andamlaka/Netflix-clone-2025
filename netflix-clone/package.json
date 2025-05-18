@@ -24,8 +24,8 @@
     "serve": "^14.2.4",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-  "start": "serve -s build -l 0.0.0.0",
+ "scripts": {
+  "start": "serve -s build -l tcp://0.0.0.0:8080",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",
   "build": "react-scripts build",
