@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-  "node": ">=20.0.0"
-},
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
@@ -21,10 +21,11 @@
     "react-router-dom": "^7.6.0",
     "react-scripts": "5.0.1",
     "react-youtube": "^10.1.0",
+    "serve": "^14.2.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-     "start": "cross-env CHOKIDAR_USEPOLLING=true react-scripts start",
+    "start": "cross-env CHOKIDAR_USEPOLLING=true react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
