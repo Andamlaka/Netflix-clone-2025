@@ -2,8 +2,8 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "http://localhost:5000", // ✅ backend URL
-  withCredentials: true,                // ✅ enables cookies/auth headers
+  baseURL: process.env.REACT_APP_API_BASE_URL, // ✅ Now dynamic
+  withCredentials: true,                       // ✅ Keeps cookies/session
 });
 
 export default api;
