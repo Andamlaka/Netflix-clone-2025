@@ -41,7 +41,7 @@ const Signup = () => {
     
 
     try {
-      const response = await axios.post("http://localhost:5000/api/auth/signup", formData);
+      const response = await axios.post("/api/auth/signup", formData);
       console.log("Signup successful:", response.data);
       navigate("/home");
     } catch (error) {
