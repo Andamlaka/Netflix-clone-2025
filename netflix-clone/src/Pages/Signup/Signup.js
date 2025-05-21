@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
-import axios from "../../utils/axios"; // Ensure this points to your backend
+import axios from "../../utils/api"; // Ensure this points to your backend
 
 const Signup = () => {
   const [formData, setFormData] = useState({
