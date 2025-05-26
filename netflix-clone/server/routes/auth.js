@@ -33,8 +33,12 @@ router.post("/signup", async (req, res) => {
 
     res.status(201).json({ message: "User created successfully!", user });
   } catch (error) {
-    console.error("❌ Signup error:", error);
-    res.status(400).json({ message: "Email already exists!" });
+    console.error("❌ Prisma creates error:", error);
+
+    if (error.code === 'P2002' && error.meta?.target?.includes('email')) {
+    return res.status(400).json({ error: "Email already exists!" });
+  }
+    return res.status(500).json({ error: "Something went wrong!" });
   }
 });
 
