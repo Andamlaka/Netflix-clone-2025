@@ -14,7 +14,7 @@ router.post("/signup", async (req, res) => {
   const { name, email, password, secretQuestion, secretAnswer } = req.body;
 
   if (!name || !email || !password || !secretQuestion || !secretAnswer) {
-    return res.status(400).json({ error: "All fields are required!" });
+    return res.status(400).json({ message: "All fields are required!" });
   }
 
   const hashedPassword = await bcrypt.hash(password, 10);
@@ -34,7 +34,7 @@ router.post("/signup", async (req, res) => {
     res.status(201).json({ message: "User created successfully!", user });
   } catch (error) {
     console.error("❌ Signup error:", error);
-    res.status(400).json({ error: "Email already exists!" });
+    res.status(400).json({ message: "Email already exists!" });
   }
 });
 
